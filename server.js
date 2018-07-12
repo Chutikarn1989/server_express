@@ -2,6 +2,11 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 
+app.use((req,res,next) => {
+    console.log('middle ware')
+    next()
+})
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json({type: '*/*'}))
 
