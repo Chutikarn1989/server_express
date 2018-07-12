@@ -1,5 +1,9 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json({type: '*/*'}))
 
 app.get('/',(req,res) => {
     res.send('Root Page')
@@ -15,6 +19,11 @@ app.get('/order',(req,res) => {
 
 app.get('/order/:orderId',(req,res) => {
     res.send('Order Page' + req.params.orderId)
+})
+
+app.post('/order',(req,res) => {
+    console.log(req.body)
+    res.json({status: 'ok'})
 })
 
 app.listen(8000,() => {
