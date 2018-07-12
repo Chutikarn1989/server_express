@@ -1,0 +1,23 @@
+{
+  "name": "server_express",
+  "version": "1.0.0",
+  "description": "Server for api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chutikarn1989/server_express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chutikarn1989/server_express/issues"
+  },
+  "homepage": "https://github.com/Chutikarn1989/server_express#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
